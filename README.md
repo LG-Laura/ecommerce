@@ -18,7 +18,7 @@ Para gestionar versiones y trabajo colaborativo, instala **Git** desde [git-scm.
 
 ## 🛠 Inicializar el Proyecto Node.js
 
-1. **Crea un directorio para tu proyecto e inicialízalo como un proyecto Node.js**:
+1. **Crea un directorio para tu proyecto e inicialízalo como un proyecto Node.js**.
 
 2. **Instala las dependencias necesarias**:
 
@@ -74,10 +74,30 @@ Integra la pasarela de pago **Mercado Pago** para gestionar pagos en la aplicaci
 
 ## 📚 Recursos Adicionales
 
-- [Documentación de Express](https://expressjs.com/)
-- [Documentación de Sequelize](https://sequelize.org/)
-- [Documentación de Swagger](https://swagger.io/docs/)
-- [Documentación de Mercado Pago](https://www.mercadopago.com.ar/developers/panel)
+### Tecnologías Utilizadas
+
+Aquí tienes una barra horizontal con enlaces a la documentación oficial de las tecnologías utilizadas en el proyecto:
+
+<div align="center">
+  <a href="https://nodejs.org" target="_blank">
+    <img src="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.png" alt="Node.js" width="100" style="margin: 10px;">
+  </a>
+  <a href="https://www.mysql.com" target="_blank">
+    <img src="https://www.mysql.com/common/logos/logo-mysql-170x115.png" alt="MySQL" width="100" style="margin: 10px;">
+  </a>
+  <a href="https://expressjs.com/" target="_blank">
+    <img src="https://expressjs.com/images/express-facebook-share.png" alt="Express" width="100" style="margin: 10px;">
+  </a>
+  <a href="https://sequelize.org/" target="_blank">
+    <img src="https://sequelize.org/img/logo-small.png" alt="Sequelize" width="100" style="margin: 10px;">
+  </a>
+  <a href="https://swagger.io/docs/" target="_blank">
+    <img src="https://swagger.io/docs/images/swagger-logo.png" alt="Swagger" width="100" style="margin: 10px;">
+  </a>
+  <a href="https://www.mercadopago.com.ar/developers/panel" target="_blank">
+    <img src="https://www.mercadopago.com.ar/images/logos/mercadopago-logo.png" alt="Mercado Pago" width="100" style="margin: 10px;">
+  </a>
+</div>
 
 ---
 
