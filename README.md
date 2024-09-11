@@ -80,8 +80,6 @@ Aquí tienes una barra horizontal con enlaces a la documentación oficial de las
 
 ## Tecnologías Utilizadas
 
-## Tecnologías Utilizadas
-
 <div align="center">
   <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank" style="display: inline-block; margin: 5px; padding: 10px 20px; background-color: #f0db4f; color: #000; border-radius: 5px; font-weight: bold; text-align: center; text-decoration: none; border: 1px solid #dcdcdc; font-size: 14px;">HTML</a>
   <a href="https://developer.mozilla.org/es/docs/Web/CSS" target="_blank" style="display: inline-block; margin: 5px; padding: 10px 20px; background-color: #264de4; color: #fff; border-radius: 5px; font-weight: bold; text-align: center; text-decoration: none; border: 1px solid #dcdcdc; font-size: 14px;">CSS</a>
