@@ -80,24 +80,15 @@ Aquí tienes una barra horizontal con enlaces a la documentación oficial de las
 
 
 <div align="center">
-  <a href="https://nodejs.org" target="_blank">
-    <img src="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.png" alt="Node.js" width="100" style="margin: 10px;">
-  </a>
-  <a href="https://www.mysql.com" target="_blank">
-    <img src="https://www.mysql.com/common/logos/logo-mysql-170x115.png" alt="MySQL" width="100" style="margin: 10px;">
-  </a>
-  <a href="https://expressjs.com/" target="_blank">
-    <img src="https://expressjs.com/images/express-facebook-share.png" alt="Express" width="100" style="margin: 10px;">
-  </a>
-  <a href="https://sequelize.org/" target="_blank">
-    <img src="https://sequelize.org/img/logo-small.png" alt="Sequelize" width="100" style="margin: 10px;">
-  </a>
-  <a href="https://swagger.io/docs/" target="_blank">
-    <img src="https://swagger.io/docs/images/swagger-logo.png" alt="Swagger" width="100" style="margin: 10px;">
-  </a>
-  <a href="https://www.mercadopago.com.ar/developers/panel" target="_blank">
-    <img src="https://www.mercadopago.com.ar/images/logos/mercadopago-logo.png" alt="Mercado Pago" width="100" style="margin: 10px;">
-  </a>
+  <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank" style="text-decoration: none; margin: 5px; padding: 10px; background-color: #f0db4f; color: #000; border-radius: 5px; font-weight: bold;">HTML</a>
+  <a href="https://developer.mozilla.org/es/docs/Web/CSS" target="_blank" style="text-decoration: none; margin: 5px; padding: 10px; background-color: #264de4; color: #fff; border-radius: 5px; font-weight: bold;">CSS</a>
+  <a href="https://developer.mozilla.org/es/docs/Web/JavaScript" target="_blank" style="text-decoration: none; margin: 5px; padding: 10px; background-color: #f7df1e; color: #000; border-radius: 5px; font-weight: bold;">JavaScript</a>
+  <a href="https://nodejs.org" target="_blank" style="text-decoration: none; margin: 5px; padding: 10px; background-color: #8CC84B; color: #fff; border-radius: 5px; font-weight: bold;">Node.js</a>
+  <a href="https://www.mysql.com" target="_blank" style="text-decoration: none; margin: 5px; padding: 10px; background-color: #00758F; color: #fff; border-radius: 5px; font-weight: bold;">MySQL</a>
+  <a href="https://expressjs.com/" target="_blank" style="text-decoration: none; margin: 5px; padding: 10px; background-color: #000; color: #fff; border-radius: 5px; font-weight: bold;">Express</a>
+  <a href="https://sequelize.org/" target="_blank" style="text-decoration: none; margin: 5px; padding: 10px; background-color: #52b0e7; color: #fff; border-radius: 5px; font-weight: bold;">Sequelize</a>
+  <a href="https://swagger.io/docs/" target="_blank" style="text-decoration: none; margin: 5px; padding: 10px; background-color: #85EA2D; color: #fff; border-radius: 5px; font-weight: bold;">Swagger</a>
+  <a href="https://www.mercadopago.com.ar/developers/panel" target="_blank" style="text-decoration: none; margin: 5px; padding: 10px; background-color: #0093D0; color: #fff; border-radius: 5px; font-weight: bold;">Mercado Pago</a>
 </div>
 
 
