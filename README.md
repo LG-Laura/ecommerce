@@ -81,7 +81,7 @@ Aquí tienes una barra horizontal con enlaces a la documentación oficial de las
 ## Tecnologías Utilizadas
 
 <div align="center">
-<a href="https://linkedin.com/in/abdoachhoubi" target="_blank">
+<a href="https://nodejs.org/en/" target="_blank">
 <img src=https://img.shields.io/badge/linkedin-%2300acee.svg?color=405DE6&style=for-the-badge&logo=linkedin&logoColor=white alt=linkedin style="margin-bottom: 5px;" />
 </a>
 <a href="https://twitter.com/abdo_achhoubi" target="_blank">
@@ -94,7 +94,6 @@ Aquí tienes una barra horizontal con enlaces a la documentación oficial de las
 <img src=https://img.shields.io/badge/hashnode-%2300acee.svg?color=2962FF&style=for-the-badge&logo=hashnode&logoColor=white alt=hshnode style="margin-bottom: 5px;" />
 </a>
 </div>
-
 
 
 ---
