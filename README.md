@@ -81,17 +81,15 @@ Aquí tienes una barra horizontal con enlaces a la documentación oficial de las
 ## Tecnologías Utilizadas
 
 <div align="center">
-  <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank" style="display: inline-block; margin: 5px; padding: 10px 20px; background-color: #f0db4f; color: #000; border-radius: 5px; font-weight: bold; text-align: center; text-decoration: none; border: 1px solid #dcdcdc; font-size: 14px;">HTML</a>
-  <a href="https://developer.mozilla.org/es/docs/Web/CSS" target="_blank" style="display: inline-block; margin: 5px; padding: 10px 20px; background-color: #264de4; color: #fff; border-radius: 5px; font-weight: bold; text-align: center; text-decoration: none; border: 1px solid #dcdcdc; font-size: 14px;">CSS</a>
-  <a href="https://developer.mozilla.org/es/docs/Web/JavaScript" target="_blank" style="display: inline-block; margin: 5px; padding: 10px 20px; background-color: #f7df1e; color: #000; border-radius: 5px; font-weight: bold; text-align: center; text-decoration: none; border: 1px solid #dcdcdc; font-size: 14px;">JavaScript</a>
-  <a href="https://nodejs.org" target="_blank" style="display: inline-block; margin: 5px; padding: 10px 20px; background-color: #8CC84B; color: #fff; border-radius: 5px; font-weight: bold; text-align: center; text-decoration: none; border: 1px solid #dcdcdc; font-size: 14px;">Node.js</a>
-  <a href="https://www.mysql.com" target="_blank" style="display: inline-block; margin: 5px; padding: 10px 20px; background-color: #00758F; color: #fff; border-radius: 5px; font-weight: bold; text-align: center; text-decoration: none; border: 1px solid #dcdcdc; font-size: 14px;">MySQL</a>
-  <a href="https://expressjs.com/" target="_blank" style="display: inline-block; margin: 5px; padding: 10px 20px; background-color: #000; color: #fff; border-radius: 5px; font-weight: bold; text-align: center; text-decoration: none; border: 1px solid #dcdcdc; font-size: 14px;">Express</a>
-  <a href="https://sequelize.org/" target="_blank" style="display: inline-block; margin: 5px; padding: 10px 20px; background-color: #52b0e7; color: #fff; border-radius: 5px; font-weight: bold; text-align: center; text-decoration: none; border: 1px solid #dcdcdc; font-size: 14px;">Sequelize</a>
-  <a href="https://swagger.io/docs/" target="_blank" style="display: inline-block; margin: 5px; padding: 10px 20px; background-color: #85EA2D; color: #fff; border-radius: 5px; font-weight: bold; text-align: center; text-decoration: none; border: 1px solid #dcdcdc; font-size: 14px;">Swagger</a>
-  <a href="https://www.mercadopago.com.ar/developers/panel" target="_blank" style="display: inline-block; margin: 5px; padding: 10px 20px; background-color: #0093D0; color: #fff; border-radius: 5px; font-weight: bold; text-align: center; text-decoration: none; border: 1px solid #dcdcdc; font-size: 14px;">Mercado Pago</a>
-</div>
-
+  [![HTML](https://img.shields.io/badge/HTML-000000?style=flat&logo=html5&logoColor=red)](https://developer.mozilla.org/es/docs/Web/HTML)
+  [![CSS](https://img.shields.io/badge/CSS-000000?style=flat&logo=css3&logoColor=blue)](https://developer.mozilla.org/es/docs/Web/CSS)
+  [![JavaScript](https://img.shields.io/badge/JavaScript-000000?style=flat&logo=javascript&logoColor=yellow)](https://developer.mozilla.org/es/docs/Web/JavaScript)
+  [![Node.js](https://img.shields.io/badge/Node.js-000000?style=flat&logo=node.js&logoColor=green)](https://nodejs.org)
+  [![MySQL](https://img.shields.io/badge/MySQL-000000?style=flat&logo=mysql&logoColor=blue)](https://www.mysql.com)
+  [![Express](https://img.shields.io/badge/Express-000000?style=flat&logo=express&logoColor=black)](https://expressjs.com/)
+  [![Sequelize](https://img.shields.io/badge/Sequelize-000000?style=flat&logo=sequelize&logoColor=blue)](https://sequelize.org/)
+  [![Swagger](https://img.shields.io/badge/Swagger-000000?style=flat&logo=swagger&logoColor=green)](https://swagger.io/docs/)
+  [![Mercado Pago](https://img.shields.io/badge/Mercado_Pago-000000?style=flat&logo=mercadopago&logoColor=blue)](https://www.mercadopago.com.ar/developers/panel)
 </div>
 
 
