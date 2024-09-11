@@ -78,6 +78,7 @@ Integra la pasarela de pago **Mercado Pago** para gestionar pagos en la aplicaci
 
 Aquí tienes una barra horizontal con enlaces a la documentación oficial de las tecnologías utilizadas en el proyecto:
 
+
 <div align="center">
   <a href="https://nodejs.org" target="_blank">
     <img src="https://nodejs.org/static/images/logos/nodejs-new-pantone-black.png" alt="Node.js" width="100" style="margin: 10px;">
@@ -98,6 +99,7 @@ Aquí tienes una barra horizontal con enlaces a la documentación oficial de las
     <img src="https://www.mercadopago.com.ar/images/logos/mercadopago-logo.png" alt="Mercado Pago" width="100" style="margin: 10px;">
   </a>
 </div>
+
 
 ---
 
