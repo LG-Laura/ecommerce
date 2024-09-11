@@ -81,15 +81,18 @@ Aquí tienes una barra horizontal con enlaces a la documentación oficial de las
 ## Tecnologías Utilizadas
 
 <div align="center">
-  [![HTML](https://img.shields.io/badge/HTML-000000?style=flat&logo=html5&logoColor=red)](https://developer.mozilla.org/es/docs/Web/HTML)
-  [![CSS](https://img.shields.io/badge/CSS-000000?style=flat&logo=css3&logoColor=blue)](https://developer.mozilla.org/es/docs/Web/CSS)
-  [![JavaScript](https://img.shields.io/badge/JavaScript-000000?style=flat&logo=javascript&logoColor=yellow)](https://developer.mozilla.org/es/docs/Web/JavaScript)
-  [![Node.js](https://img.shields.io/badge/Node.js-000000?style=flat&logo=node.js&logoColor=green)](https://nodejs.org)
-  [![MySQL](https://img.shields.io/badge/MySQL-000000?style=flat&logo=mysql&logoColor=blue)](https://www.mysql.com)
-  [![Express](https://img.shields.io/badge/Express-000000?style=flat&logo=express&logoColor=black)](https://expressjs.com/)
-  [![Sequelize](https://img.shields.io/badge/Sequelize-000000?style=flat&logo=sequelize&logoColor=blue)](https://sequelize.org/)
-  [![Swagger](https://img.shields.io/badge/Swagger-000000?style=flat&logo=swagger&logoColor=green)](https://swagger.io/docs/)
-  [![Mercado Pago](https://img.shields.io/badge/Mercado_Pago-000000?style=flat&logo=mercadopago&logoColor=blue)](https://www.mercadopago.com.ar/developers/panel)
+<a href="https://linkedin.com/in/abdoachhoubi" target="_blank">
+<img src=https://img.shields.io/badge/linkedin-%2300acee.svg?color=405DE6&style=for-the-badge&logo=linkedin&logoColor=white alt=linkedin style="margin-bottom: 5px;" />
+</a>
+<a href="https://twitter.com/abdo_achhoubi" target="_blank">
+<img src=https://img.shields.io/badge/twitter-%2300acee.svg?color=1DA1F2&style=for-the-badge&logo=twitter&logoColor=white alt=twitter style="margin-bottom: 5px;" />
+</a>
+<a href="https://instagram.com/abdo.achhoubi" target="_blank">
+<img src=https://img.shields.io/badge/instagram-%ff5851db.svg?color=C13584&style=for-the-badge&logo=instagram&logoColor=white alt=instagram style="margin-bottom: 5px;" />
+</a>
+<a href="https://achhoubiplus.hashnode.dev" target="_blank">
+<img src=https://img.shields.io/badge/hashnode-%2300acee.svg?color=2962FF&style=for-the-badge&logo=hashnode&logoColor=white alt=hshnode style="margin-bottom: 5px;" />
+</a>
 </div>
 
 
