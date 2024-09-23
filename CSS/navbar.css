@@ -1,0 +1,91 @@
+/* Reset básico */
+
+:root {
+    /* Definición de Colores */
+    --color-white: #FFFFFF;
+    --color-bright-gray: #E9EBF3;
+    --color-gray: #999999;
+    --color-black: #000000;
+    --color-black-transparent: rgba(0, 0, 0, 0.5);
+    --color-black3: #413838;
+    --color-red: #9F2828;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Arial', sans-serif; /* Cambia a la fuente que prefieras */
+}
+
+/* Estilos de la navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Espacio entre el logo y el icono del carrito */
+    align-items: center;
+    background-color: var(--color-bright-gray); /* Color de fondo */
+    padding: 10px 20px; /* Padding superior e inferior y laterales */
+    width: 100%; /* Ocupa el 100% del ancho */
+    position: fixed; /* Fijo en la parte superior */
+    top: 0; /* Mantener en la parte superior */
+    left: 0; /* Desde el borde izquierdo */
+    z-index: 1000; /* Por encima de otros elementos */
+}
+
+.container-fluid {
+    display: flex;
+    align-items: center; /* Alinear verticalmente */
+    width: 100%; /* Asegurarse de que ocupe todo el ancho */
+    max-width: 1200px; /* Limita el ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor */
+}
+
+/* Logo */
+.logo img {
+    height: 40px; /* Ajusta el tamaño del logo */
+}
+
+/* Estilos del menú */
+.nav-bar {
+    display: flex; /* Para alinear los elementos horizontalmente */
+    justify-content: center; /* Centramos los elementos del menú */
+    flex-grow: 1; /* Ocupa el espacio disponible */
+    gap: 30px; /* Espacio entre los elementos del menú */
+}
+
+.nav-item {
+    list-style: none; /* Elimina los puntos de lista */
+}
+
+.nav-link {
+    color: var(--color-black); /* Color de texto */
+    font-size: 1.1em; /* Tamaño de fuente */
+    padding: 10px 15px; /* Padding para los enlaces */
+    text-decoration: none; /* Sin subrayado */
+    transition: color 0.3s ease; /* Efecto de transición */
+}
+
+.nav-link:hover {
+    color: var(--color-red); /* Color al pasar el mouse */
+}
+
+.nav-link.active {
+    font-weight: bold; /* Negrita para el enlace activo */
+}
+
+/* Estilos del icono del carrito */
+.shopping-icon {
+    display: flex;
+    align-items: center;
+}
+
+.shopping-icon img {
+    height: 30px; /* Ajusta el tamaño del icono de carrito */
+    margin-left: 15px; /* Espacio a la izquierda del icono */
+}
