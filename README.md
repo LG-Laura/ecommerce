@@ -1,20 +1,25 @@
 # Proyecto de Comercio Electrónico
 
-Este proyecto es una aplicación de comercio electrónico desarrollada utilizando **Node.js**, **MySQL**, **HTML**, **CSS**, **Bootstrap/Material**, y **JavaScript**. La documentación de la API se maneja con **Swagger**. A continuación, se presentan las instrucciones para configurar y ejecutar el proyecto.
+Este proyecto es una aplicación de comercio electrónico desarrollada utilizando **Node.js**, **MySQL**, **HTML**, **CSS**, **JavaScript**, y **LocalStorage** para simular funcionalidades de backend. La página no solo muestra una lista de productos, sino que también sugiere productos basados en el comportamiento de navegación del usuario. En el futuro, se integrará un backend completo y se añadirán más funcionalidades. 
 
-## 🚀 Preparación del Entorno
+La documentación de la API, cuando se implemente el backend, se manejará con **Swagger**. A continuación, se presentan las instrucciones para configurar y ejecutar el proyecto.
 
-### 1.1 Instalar Node.js y npm
+## 🚀 Funcionalidades Principales
 
-Asegúrate de tener **Node.js** y **npm** instalados en tu máquina. Puedes descargarlos desde [nodejs.org](https://nodejs.org).
+- Registro e inicio de sesión de usuarios utilizando **LocalStorage**.
+- Visualización de productos disponibles con la opción de agregar productos al carrito.
+- Sugerencias de productos basadas en la navegación del usuario.
+- Carrito de compras dinámico con actualización en tiempo real de la cantidad de productos.
+- Persistencia de los datos de usuarios y carrito utilizando **LocalStorage**.
+- **Futuro**: Integración con un backend utilizando **Node.js**, **MySQL**, y **Sequelize**.
 
-### 1.2 Instalar MySQL
+## 🎨 Galería de Imágenes
 
-Descarga e instala **MySQL** desde [mysql.com](https://www.mysql.com) y configura tu base de datos local.
+El diseño de la interfaz está maquetado con **HTML** y **CSS**. A continuación, puedes ver una galería de las imágenes del diseño:
 
-### 1.3 Instalar Git
-
-Para gestionar versiones y trabajo colaborativo, instala **Git** desde [git-scm.com](https://git-scm.com).
+![Diseño 1](./IMG/)
+![Diseño 2](./design/design2.png)
+![Diseño 3](./design/design3.png)
 
 ## 🛠 Inicializar el Proyecto Node.js
 
