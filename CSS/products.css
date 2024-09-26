@@ -1,0 +1,212 @@
+/* Variables de colores y fuentes */
+:root {
+    --color-bright-gray: #f7f7f7;
+    --color-white: #ffffff;
+    --color-gray: #cccccc;
+    --color-black: #000000;
+    --color-red: #ff0000;
+    --color-black-transparent: rgba(0, 0, 0, 0.8);
+    --font-family-secondary: Arial, sans-serif;
+    --font-family-tertiary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-size-base: 16px;
+    --font-size-large: 18px;
+}
+
+/* Contenedor principal */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--color-bright-gray);
+}
+
+/* Contenedor de contenido */
+.container {
+    width: 100%;
+    max-width: 1380px;
+    margin: 10px auto;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--color-white);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Estilo del header */
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.search-bar {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid var(--color-gray);
+    border-radius: 4px;
+    font-family: var(--font-family-secondary);
+    font-size: var(--font-size-base);
+}
+
+/* Estilo del aside */
+.filters {
+    width: 20%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.filters h2, .filters h3 {
+    color: var(--color-black);
+    font-family: var(--font-family-secondary);
+    font-size: var(--font-size-large);
+}
+
+.filters ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.filters ul li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.filters ul li input {
+    margin-right: 10px;
+}
+
+.filters hr {
+    border: 1px solid var(--color-gray);
+    margin: 20px 0;
+}
+
+/* Estilo de la lista de productos */
+.product-list {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-left: 1px solid var(--color-gray);
+}
+
+.product-item {
+    width: calc(25% - 20px);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray);
+    border-radius: 8px;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    width: 100%;
+    border: 1px solid var(--color-gray);
+    border-radius: 8px;
+    padding: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-image img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 8px;
+}
+
+.product-info {
+    text-align: center;
+}
+
+.product-info h3, .product-info p {
+    margin: 5px 0;
+    font-family: var(--font-family-secondary);
+}
+
+.product-info p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stock-status {
+    color: green;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.stock-status.out-of-stock {
+    color: red;
+}
+
+.add-to-cart {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: var(--font-family-tertiary);
+    font-size: var(--font-size-base);
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart:disabled {
+    background-color: var(--color-gray);
+    cursor: not-allowed;
+}
+
+.add-to-cart:hover:not(:disabled) {
+    background-color: darkgray;
+}
+
+/* Estilo del footer */
+footer {
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination-button {
+    padding: 10px 15px;
+    border: none;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    border-radius: 4px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pagination-button:hover {
+    background-color: darkgray;
+}
