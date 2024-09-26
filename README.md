@@ -17,7 +17,7 @@ La documentación de la API, cuando se implemente el backend, se manejará con *
 
 El diseño de la interfaz está maquetado con **HTML** y **CSS**. A continuación, puedes ver una galería de las imágenes del diseño:
 
-![Diseño 1](./IMG/)
+![Diseño 1](./IMG/imgAirbag.jpg)
 ![Diseño 2](./design/design2.png)
 ![Diseño 3](./design/design3.png)
 
