@@ -20,18 +20,35 @@
                     <a class="nav-link" href="nosotros.html">NOSOTROS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="catalogo.html">CATALOGO</a>
+                    <a class="nav-link" href="products.html">CATALOGO</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="login.html">LOGIN</a>
                 </li>
             </ul>
             <div class="shopping-icon">
-                <a href="/login"> <!-- Cambié la ruta a /login -->
+                <a href="/ecommerce/PAGES/cart.html">
                     <img src="/ecommerce/IMG/shopping_icon.ico" alt="Carrito">
+                    <p>0</p>
                 </a>
-            </div>
+            </div>            
         </div>
     </nav>
+
+    <script src="/ecommerce/JS/nabvar.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const isLoggedIn = localStorage.getItem('isLoggedIn');
+            const cartCount = localStorage.getItem('cartCount') || 0;
+
+            if (isLoggedIn === 'true') {
+                document.querySelector('.shopping-icon').style.display = 'flex'; // Mostrar el carrito
+                document.querySelector('.shopping-icon p').textContent = cartCount; // Mostrar cantidad
+            } else {
+                window.location.href = 'login.html'; // Redirigir al login si no está logueado
+            }
+        });
+    </script>
 </body>
 </html>
