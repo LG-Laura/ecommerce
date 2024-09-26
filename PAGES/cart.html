@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+</head>
+<body>
+    <div class="navbar-container"></div>
+
+    <h1>Carrito de Compras</h1>
+    <div class="cart-container"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartContainer = document.querySelector('.cart-container');
+
+            if (cart.length === 0) {
+                cartContainer.innerHTML = '<p>Tu carrito está vacío</p>';
+            } else {
+                cartContainer.innerHTML = cart.map(product => `
+                    <div class="cart-item">
+                        <h3>${product.name}</h3>
+                        <p>Precio: ${product.price}</p>
+                        <p>Cantidad: ${product.quantity}</p>
+                        <button class="remove-from-cart" data-id="${product.id}">Eliminar</button>
+                    </div>
+                `).join('');
+
+                // Agregar event listeners a los botones de eliminar
+                document.querySelectorAll('.remove-from-cart').forEach(button => {
+                    button.addEventListener('click', function() {
+                        const productId = this.getAttribute('data-id');
+                        removeFromCart(productId);
+                    });
+                });
+            }
+        });
+
+        function removeFromCart(productId) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart = cart.filter(product => product.id !== productId);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            location.reload();  // Recargar la página para actualizar el carrito
+        }
+    </script>
+
+</body>
+</html>
