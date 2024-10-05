@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/ecommerce/CSS/navbar.css">
+    <link rel="stylesheet" href="../CSS/navbar.css">
     <title>Barra de navegacion</title>
 </head>
 <body>
@@ -14,21 +14,22 @@
             </div>
             <ul class="nav-bar">
                 <li class="nav-item">
-                    <a class="nav-link active" href="home.html">HOME</a>
+                    <a class="nav-link active" href="index.html">HOME</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="nosotros.html">NOSOTROS</a>
+                    <a class="nav-link" href="/ecommerce/PAGES/nosotros.html">NOSOTROS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="products.html">CATALOGO</a>
+                    <a class="nav-link" href="/ecommerce/PAGES/products.html">CATALOGO</a>
                 </li>
+                <li class="nav-item" id="welcomeMessage"></li>
                 <li class="nav-item">
-                    <a class="nav-link" href="login.html">LOGIN</a>
+                    <a class="nav-link" href="/ecommerce/PAGES/login.html">LOGIN</a>
                 </li>
             </ul>
             <div class="shopping-icon">
-                <a href="/ecommerce/PAGES/cart.html">
-                    <img src="/ecommerce/IMG/shopping_icon.ico" alt="Carrito">
+                <a href="../PAGES/cart.html">
+                    <img src="../IMG/shopping_icon.ico" alt="Carrito">
                     <p>0</p>
                 </a>
             </div>            
@@ -38,17 +39,25 @@
     <script src="/ecommerce/JS/nabvar.js"></script>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const isLoggedIn = localStorage.getItem('isLoggedIn');
+            const loggedInUser = localStorage.getItem('loggedInUser');
             const cartCount = localStorage.getItem('cartCount') || 0;
 
             if (isLoggedIn === 'true') {
-                document.querySelector('.shopping-icon').style.display = 'flex'; // Mostrar el carrito
-                document.querySelector('.shopping-icon p').textContent = cartCount; // Mostrar cantidad
-            } else {
-                window.location.href = 'login.html'; // Redirigir al login si no está logueado
+                document.querySelector('.shopping-icon p').textContent = cartCount;
+                document.querySelector('.nav-bar').innerHTML += `
+                    <li class="nav-item">
+                        <a class="nav-link">Bienvenido, ${loggedInUser}</a>
+                    </li>
+                    <li class="nav-item">
+                        <button onclick="logoutUser()" class="nav-link">Cerrar sesión</button>
+                    </li>`;
             }
         });
+    </script>
+    <script>
+        document.getElementById('loginButton').addEventListener('click', loginUser);
     </script>
 </body>
 </html>

@@ -1,13 +1,43 @@
+<<<<<<< Updated upstream
+=======
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/home.css">
     <title>Home</title>
 </head>
 <body>
     
     <div class="navbar-container"></div>
+
+    <main class="container">
+        <!-- Article del lado izquierdo -->
+        <article class="left-section">
+            <h1>Bienvenidos a nuestra tienda</h1>
+            <p>Explora nuestros productos exclusivos y disfruta de ofertas únicas. Aquí encontrarás todo lo que necesitas para tu día a día.</p>
+            <button class="buy-button">Comprar</button>
+        </article>
+
+        <!-- Article del lado derecho -->
+        <article class="right">
+            <div class="image-container">
+                <img src="../IMG/imgSonataEstratocasterSeries.png" alt="Producto Destacado">
+            </div>
+        </article>
+    </main>
+
+    <script>
+        const buyButton = document.querySelector('.buy-button');
+        buyButton.addEventListener('mouseover', () => {
+            buyButton.textContent = '¡Presiona para Comprar!';
+        });
+
+        buyButton.addEventListener('mouseout', () => {
+            buyButton.textContent = 'Comprar';
+        });
+    </script>
 
     <script>
         fetch('navbar.html')
@@ -15,8 +45,9 @@
             .then(data => {
                 document.querySelector('.navbar-container').innerHTML = data;
             })
-            .catch(error => console.error('Error al cargar el navbar:', error));
+            .catch(error => console.error('Error al cargar la barra de navegación:', error));
     </script>
 
 </body>
 </html>
+>>>>>>> Stashed changes

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/ecommerce/CSS/products.css">
+    <link rel="stylesheet" href="../CSS/products.css">
     <title>Catalogo</title>
 </head>
 <body>
@@ -67,7 +67,7 @@
         <main class="product-list">
             <div class="product-item">
                 <div class="product-image">
-                    <img src="/ecommerce/IMG/imgSonataEstratocasterSeries.png" alt="Guitarra eléctrica">
+                    <img src="../IMG/imgSonataEstratocasterSeries.png" alt="Guitarra eléctrica">
                 </div>
                 <div class="product-info">
                     <h3>Guitarra eléctrica</h3>
@@ -78,7 +78,7 @@
             </div>
             <div class="product-item">
                 <div class="product-image">
-                    <img src="/ecommerce/IMG/imgLesPaulSonataSeries-Negra.png" alt="Guitarra eléctrica">
+                    <img src="../IMG/imgLesPaulSonataSeries-Negra.png" alt="Guitarra eléctrica">
                 </div>
                 <div class="product-info">
                     <h3>Guitarra eléctrica</h3>
@@ -89,7 +89,7 @@
             </div>
             <div class="product-item">
                 <div class="product-image">
-                    <img src="/ecommerce/IMG/imgElectroacusticaSonataSeries.png" alt="Guitarra eléctro acústica">
+                    <img src="../IMG/imgElectroacusticaSonataSeries.png" alt="Guitarra eléctro acústica">
                 </div>
                 <div class="product-info">
                     <h3>Guitarra eléctro acústica</h3>
@@ -100,7 +100,7 @@
             </div>
             <div class="product-item">
                 <div class="product-image">
-                    <img src="/ecommerce/IMG/imgLesPaulSonataSeries-Naranja.png" alt="Guitarra eléctrica">
+                    <img src="../IMG/imgLesPaulSonataSeries-Naranja.png" alt="Guitarra eléctrica">
                 </div>
                 <div class="product-info">
                     <h3>Guitarra eléctrica</h3>
@@ -120,15 +120,39 @@
     </div>
 
     <script>
-        // Cargar el archivo navbar.html dinámicamente
         fetch('navbar.html')
             .then(response => response.text())
             .then(data => {
                 document.querySelector('.navbar-container').innerHTML = data;
             })
-            .catch(error => console.error('Error al cargar el navbar:', error));
+            .catch(error => console.error('Error al cargar la barra de navegación:', error));
     </script>
-    <script src="/ecommerce/JS/products.js"></script>
+    <script>
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+        button.addEventListener('click', () => {
+        const isLoggedIn = localStorage.getItem('isLoggedIn');
+        if (isLoggedIn === 'true') {
+            const user = JSON.parse(localStorage.getItem(localStorage.getItem('loggedInUser')));
+            const productId = button.getAttribute('data-id');
+            user.cart.push(productId);
+            localStorage.setItem(localStorage.getItem('loggedInUser'), JSON.stringify(user));
+            alert('Producto agregado al carrito');
+            updateCartCount(user.cart.length);
+        } else {
+            alert('Debes iniciar sesión para agregar productos al carrito');
+            window.location.href = 'login.html';
+        }
+    });
+});
+
+function updateCartCount(count) {
+    localStorage.setItem('cartCount', count);
+    document.querySelector('.shopping-icon p').textContent = count;
+    document.querySelector('.shopping-icon p').style.color = count > 0 ? 'green' : 'red';
+}
+
+    </script>
+    <script src="../JS/products.js"></script>
 </div>
 </body>
 </html>

@@ -81,14 +81,24 @@ html, body {
 
 /* Estilos del icono del carrito */
 .shopping-icon {
-    display: flex;
-    align-items: center;
+    position: relative;
+    display: inline-block; /* Asegura que el icono y el número estén en línea */
 }
 
 .shopping-icon img {
-    height: 20px; /* Ajusta el tamaño del icono de carrito */
-    margin-left: 15px; /* Espacio a la izquierda del icono */
+    height: 30px; /* Tamaño del icono del carrito */
 }
 
-
-
+.shopping-icon p {
+    position: absolute;
+    top: -8px; /* Ajusta esta propiedad para moverlo verticalmente */
+    right: -8px; /* Ajusta esta propiedad para moverlo horizontalmente */
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    font-size: 12px; /* Tamaño más pequeño del número */
+    padding: 1px 4px; /* Ajusta el espaciado para un tamaño más pequeño */
+    line-height: 1; /* Mantiene el número centrado verticalmente */
+    min-width: 18px; /* Para mantener el círculo si el número es solo un dígito */
+    text-align: center; /* Centra el número dentro del círculo */
+}

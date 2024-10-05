@@ -1,4 +1,3 @@
-// Función para registrar un usuario
 function registerUser() {
     const name = document.getElementById('name').value;
     const lastName = document.getElementById('lastName').value;
@@ -6,51 +5,116 @@ function registerUser() {
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
-    const user = { name, lastName, telefono, email, password };
-    
-    let users = JSON.parse(localStorage.getItem('users')) || [];
+    // Crear objeto con los datos del usuario
+    const userData = {
+        nombre: name,
+        apellido: lastName,
+        telefono,
+        email,
+        password
+    };
 
-    // Verificar si el usuario ya está registrado
-    const existingUser = users.find(u => u.email === email);
-    if (existingUser) {
-        alert("El usuario ya está registrado");
-        return;
-    }
-
-    users.push(user);
-    localStorage.setItem('users', JSON.stringify(users));
-    alert("Usuario registrado con éxito");
-
-    window.location.href = 'login.html';  // Redirigir al login
+    // Hacer la solicitud POST a la API de registro
+    fetch('http://localhost:5000/api/auth/register', { // Cambia el puerto si es necesario
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(userData)
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Error en el registro');
+        }
+        return response.json();
+    })
+    .then(data => {
+        alert(data.msg); // Mostrar mensaje de éxito
+        window.location.href = 'login.html'; // Redirigir a la página de login
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Error al registrar el usuario. Intenta nuevamente.');
+    });
 }
 
-// Función para iniciar sesión
 function loginUser() {
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
-    let users = JSON.parse(localStorage.getItem('users')) || [];
-    const user = users.find(u => u.email === email && u.password === password);
+    // Crear objeto con las credenciales del usuario
+    const loginData = {
+        email,
+        password
+    };
 
-    if (user) {
-        localStorage.setItem('loggedInUser', JSON.stringify(user));
-        alert("Inicio de sesión exitoso");
-        window.location.href = 'products.html';  // Redirigir al catálogo
-    } else {
-        alert("Usuario o contraseña incorrectos");
-    }
+    // Hacer la solicitud POST a la API de login
+    fetch('http://localhost:5000/api/auth/login', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(loginData)
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Error en el login');
+        }
+        return response.json();
+    })
+    .then(data => {
+        // Verifica que el backend esté devolviendo el token y otros campos
+        console.log(data); // Para ver qué campos se están devolviendo realmente
+
+        // Asegúrate de que 'data.token' tiene un valor antes de almacenarlo
+        if (data.token) {
+            // Almacenar el token en el localStorage
+            localStorage.setItem('token', data.token); // Almacena el token JWT
+            localStorage.setItem('isLoggedIn', 'true');
+            localStorage.setItem('username', data.user.nombre); // Asegúrate de que 'data.user.nombre' exista
+            localStorage.setItem('cartCount', 0);
+
+            // Redirigir a la página de inicio
+            window.location.href = 'index.html';
+        } else {
+            throw new Error('No se ha recibido el token del servidor.');
+        }
+    })
+    .catch(error => {
+        console.error('Error al iniciar sesión:', error.message);
+        alert('Acceso denegado. Por favor, revisa tus credenciales.');
+    });
 }
 
-// Función para cerrar sesión
+// Función para obtener datos protegidos
+function fetchProtectedData() {
+    const token = localStorage.getItem('token');
+
+    fetch('http://localhost:5000/api/auth/protected', {
+        method: 'GET',
+        headers: {
+            'Authorization': `Bearer ${token}`, // Asegúrate de que el token esté presente aquí
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Error al acceder a la ruta protegida');
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log('Datos protegidos:', data);
+        // Aquí puedes manejar los datos recibidos
+    })
+    .catch(error => {
+        console.error('Error al acceder a la ruta protegida:', error.message);
+    });
+}
+
 function logoutUser() {
-    localStorage.removeItem('loggedInUser');
-    window.location.href = 'login.html';  // Redirigir al login
-}
-
-// Verificar si hay un usuario logueado
-function checkUserLoggedIn() {
-    const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
-    if (loggedInUser) {
-        document.querySelector('.shopping-icon p').innerText = `Hola, ${loggedInUser.name}`;
-    }
+    localStorage.setItem('isLoggedIn', 'false');
+    localStorage.removeItem('username');
+    localStorage.removeItem('cartCount');
+    window.location.href = 'login.html';
 }
